@@ -1,0 +1,106 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #333;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: rgb(0, 100, 200);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(0, 80, 160);
+}
+
+label {
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-padding: 0.4em 0;
+  padding: 0.4em;
+  margin: 0 0 0.5em 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+input:disabled {
+  color: #ccc;
+}
+
+button {
+  color: #333;
+  background-color: #f4f4f4;
+  outline: none;
+}
+
+button:disabled {
+  color: #999;
+}
+
+button:not(:disabled):active {
+  background-color: #ddd;
+}
+
+button:focus {
+  border-color: #666;
+}
+
+p,
+pre {
+  font-size: 16px;
+}
+pre {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+
+table {
+  width: 100%;
+  border-radius: 8px;
+  display: table;
+  border: 1px solid rgb(225, 227, 230);
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th {
+  font-weight: 400;
+  text-align: left;
+  padding: 16px;
+  white-space: nowrap;
+  color: #6d7885;
+  background: #f9f9f9;
+}
+
+td {
+  border-top: 1px solid #e1e3e6;
+}
+
+td:not([colspan]) {
+  padding: 20px 16px;
+}
