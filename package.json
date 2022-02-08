@@ -1,0 +1,59 @@
+{
+  "name": "@sveltevk/widgets",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "VK widgets, provided as a Svelte components.",
+  "author": "Daniil Suvorov (https://github.com/SevereCloud)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "svelte": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "build": "npm run component-build && npm run doc-build",
+    "component-build": "rollup -c",
+    "doc-build": "rollup -c doc.config.js",
+    "doc-dev": "rollup -c doc.config.js -w",
+    "doc-format": "prettier --write  'doc/**/*.{js,jsx,ts,tsx,svelte}'",
+    "component-format": "prettier --write  'src/**/*.{js,jsx,ts,tsx,svelte}'",
+    "format": "npm run component-format && npm run doc-format",
+    "start": "sirv public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "glob": "^7.1.6",
+    "mdsvex": "^0.8.6",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.6.0",
+    "prism-svelte": "^0.4.7",
+    "prismjs": "^1.21.0",
+    "rollup": "^2.26.5",
+    "rollup-plugin-livereload": "^1.3.0",
+    "rollup-plugin-svelte": "^5.2.3",
+    "rollup-plugin-terser": "^7.0.0",
+    "sirv-cli": "^1.0.6",
+    "svelte": "^3.24.1"
+  },
+  "peerDependencies": {
+    "svelte": "^3.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sveltevk/widgets.git"
+  },
+  "homepage": "https://sveltevk.github.io/widgets/",
+  "bugs": "https://github.com/sveltevk/widgets/issues",
+  "keywords": [
+    "vk",
+    "widgets",
+    "components",
+    "svelte"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
