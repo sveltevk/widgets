@@ -4,7 +4,8 @@
     padding: 12px 16px;
   }
 
-  .FormItem p {
+  .FormItem p,
+  .FormItem :global(label) {
     padding-top: 2px;
     padding-bottom: 8px;
     overflow: hidden;
@@ -25,10 +26,12 @@
 </style>
 
 <script>
-  export let text;
+  export let text = '';
 </script>
 
 <div class="FormItem">
-  <p>{text}</p>
+  {#if text}
+    <p>{text}</p>
+  {/if}
   <slot />
 </div>

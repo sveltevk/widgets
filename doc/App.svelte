@@ -20,6 +20,8 @@
   import ArticleConstructor from './constructors/Article.svelte';
   import PodcastDoc from '../src/Podcast/README.md';
   import PodcastConstructor from './constructors/Podcast.svelte';
+  import CommunityMessagesDoc from '../src/CommunityMessages/README.md';
+  import CommunityMessagesConstructor from './constructors/CommunityMessages.svelte';
 
   VK.init({
     apiId: 8074433,
@@ -42,46 +44,55 @@
   </ul>
 
   <Router let:this="{router}" bind:pages>
-  <!-- Авторизация -->
+    <!-- Авторизация -->
 
     <RouterPage router="{router}" name="Закладки" link="Bookmarks">
-  <BookmarksDoc />
-  <BookmarksConstructor />
+      <BookmarksDoc />
+      <BookmarksConstructor />
     </RouterPage>
 
-  <!-- Запись на стене -->
-  <!-- Комментарии -->
+    <!-- Запись на стене -->
+    <!-- Комментарии -->
 
     <RouterPage router="{router}" name="Напишите нам" link="ContactUs">
-  <ContactUsDoc />
-  <ContactUsConstructor />
+      <ContactUsDoc />
+      <ContactUsConstructor />
     </RouterPage>
 
-  <!-- Нравится -->
-  <!-- Опрос -->
-  <!-- Плейлист -->
-  <!-- Подписаться на автора -->
+    <!-- Нравится -->
+    <!-- Опрос -->
+    <!-- Плейлист -->
+    <!-- Подписаться на автора -->
 
     <RouterPage router="{router}" name="Приложение" link="App">
-  <AppDoc />
-  <AppConstructor />
+      <AppDoc />
+      <AppConstructor />
     </RouterPage>
 
-  <!-- Публикация ссылок -->
-  <!-- Разрешить сообщения от сообщества -->
-  <!-- Рекомендации -->
-  <!-- Репортаж -->
-  <!-- Сообщения сообщества -->
-  <!-- Сообщества -->
+    <!-- Публикация ссылок -->
+    <!-- Разрешить сообщения от сообщества -->
+    <!-- Рекомендации -->
+    <!-- Репортаж -->
+
+    <RouterPage
+      router="{router}"
+      name="Сообщения сообщества"
+      link="CommunityMessages"
+    >
+      <CommunityMessagesDoc />
+      <CommunityMessagesConstructor />
+    </RouterPage>
+
+    <!-- Сообщества -->
 
     <RouterPage router="{router}" name="Статья" link="Article">
-  <ArticleDoc />
-  <ArticleConstructor />
+      <ArticleDoc />
+      <ArticleConstructor />
     </RouterPage>
 
     <RouterPage router="{router}" name="Эпизод подкаста " link="Podcast">
-  <PodcastDoc />
-  <PodcastConstructor />
+      <PodcastDoc />
+      <PodcastConstructor />
     </RouterPage>
   </Router>
 </main>

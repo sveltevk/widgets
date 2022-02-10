@@ -71,6 +71,33 @@ export class App {
   $$prop_def: AppProps;
 }
 
+export class CommunityMessages {
+  $$prop_def: {
+    /**
+     * @type {number} [group={127607773}]
+     */
+    group: number;
+
+    onCanNotWrite?: (
+      reason: 'offline' | 'no_access' | 'disabled_messages' | 'cant_write',
+    ) => any;
+    welcomeScreen?: boolean;
+    expandTimeout?: number;
+    expanded?: true;
+    widgetPosition?: 'left' | 'right';
+    buttonType?: 'no_button' | 'blue_circle';
+    disableButtonTooltip?: true;
+    tooltipButtonText?: string;
+    disableNewMessagesSound?: true;
+    disableExpandChatSound?: true;
+    disableTitleChange?: true;
+  };
+  destroy(id: string): void;
+  expand(options: { welcomeScreen?: true }): void;
+  stopTitleAnimation(): void;
+  minimize(): void;
+}
+
 export class Article {
   $$prop_def: {
     /**
