@@ -6,6 +6,8 @@
 
 VK widgets, provided as a Svelte components.
 
+**WORK IN PROGRESS**!
+
 ## Setup
 
 ```sh

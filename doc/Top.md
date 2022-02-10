@@ -19,8 +19,7 @@ npm i @sveltevk/widgets
   <script
     type="text/javascript"
     src="https://vk.com/js/api/openapi.js?168"
-    charset="windows-1251"
-  ></script>
+    charset="windows-1251"></script>
 </head>
 ```
 
