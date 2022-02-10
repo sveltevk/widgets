@@ -8,6 +8,8 @@
 
 <script>
   import Top from './Top.md';
+  import Router from './components/Router.svelte';
+  import RouterPage from './components/RouterPage.svelte';
   import BookmarksDoc from '../src/Bookmarks/README.md';
   import BookmarksConstructor from './constructors/Bookmarks.svelte';
   import ContactUsDoc from '../src/ContactUs/README.md';
@@ -23,37 +25,63 @@
     apiId: 8074433,
     onlyWidgets: true,
   });
+
+  let pages = [];
 </script>
 
 <main>
   <Top />
 
+  <h2>Виджеты</h2>
+  <ul>
+    {#each pages as page}
+      <li>
+        <a href="{'#' + page.link}">{page.name}</a>
+      </li>
+    {/each}
+  </ul>
+
+  <Router let:this="{router}" bind:pages>
   <!-- Авторизация -->
-  <!-- Закладки -->
+
+    <RouterPage router="{router}" name="Закладки" link="Bookmarks">
   <BookmarksDoc />
   <BookmarksConstructor />
+    </RouterPage>
+
   <!-- Запись на стене -->
   <!-- Комментарии -->
-  <!-- Напишите нам -->
+
+    <RouterPage router="{router}" name="Напишите нам" link="ContactUs">
   <ContactUsDoc />
   <ContactUsConstructor />
+    </RouterPage>
+
   <!-- Нравится -->
   <!-- Опрос -->
   <!-- Плейлист -->
   <!-- Подписаться на автора -->
-  <!-- Приложение -->
+
+    <RouterPage router="{router}" name="Приложение" link="App">
   <AppDoc />
   <AppConstructor />
+    </RouterPage>
+
   <!-- Публикация ссылок -->
   <!-- Разрешить сообщения от сообщества -->
   <!-- Рекомендации -->
   <!-- Репортаж -->
   <!-- Сообщения сообщества -->
   <!-- Сообщества -->
-  <!-- Статья -->
+
+    <RouterPage router="{router}" name="Статья" link="Article">
   <ArticleDoc />
   <ArticleConstructor />
-  <!-- Эпизод подкаста -->
+    </RouterPage>
+
+    <RouterPage router="{router}" name="Эпизод подкаста " link="Podcast">
   <PodcastDoc />
   <PodcastConstructor />
+    </RouterPage>
+  </Router>
 </main>
