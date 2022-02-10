@@ -12,7 +12,7 @@
 npm i @sveltevk/widgets
 ```
 
-Для работоспособности виджетов необходимо в тег `<head>` добавить подключение `openapi.js`
+Для работоспособности виджетов необходимо в тег `<head>` добавить подключение [openapi.js](https://dev.vk.com/api/open-api/getting-started)
 
 ```svelte
 <head>

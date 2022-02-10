@@ -6,7 +6,8 @@
 
 /*	colors --------------------------------- */
 pre[class*='language-'],
-table {
+table,
+code {
 	--background: hsl(0, 0%, 100%);
 	--base:       hsl(45, 7%, 45%);
 	--comment:    hsl(210, 25%, 60%);
@@ -96,6 +97,14 @@ pre[class*='language-'] {
 .token.italic { font-style: italic }
 .token.entity { cursor: help }
 
+code:not(code[class*='language-']) {   
+	padding: 1px 4px;
+	margin-inline: 0.2rem;
+	margin-block: 0;
+	background-color: #eee;
+	border-radius: 0.3em;
+	white-space: nowrap;
+}
 
 tbody > tr > td:nth-child(1) {
   color: var(--function);
