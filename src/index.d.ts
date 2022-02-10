@@ -32,6 +32,25 @@ export class ContactUs {
   };
 }
 
+export class Like {
+  $$prop_def: {
+    type?: 'full' | 'button' | 'mini' | 'vertical';
+    width?: number;
+
+    /**
+     * @type {number} [height={30}]
+     * @default 22
+     */
+    height?: 18 | 20 | 22 | 24 | 30;
+
+    verb?: true;
+    pageTitle?: string;
+    pageUrl?: string;
+    pageImage?: string;
+    pageId?: string;
+  };
+}
+
 interface AppCard {
   /**
    * @type {string} [url="5327745"]

@@ -14,6 +14,8 @@
   import BookmarksConstructor from './constructors/Bookmarks.svelte';
   import ContactUsDoc from '../src/ContactUs/README.md';
   import ContactUsConstructor from './constructors/ContactUs.svelte';
+  import LikeDoc from '../src/Like/README.md';
+  import LikeConstructor from './constructors/Like.svelte';
   import AppDoc from '../src/App/README.md';
   import AppConstructor from './constructors/App.svelte';
   import ArticleDoc from '../src/Article/README.md';
@@ -59,7 +61,11 @@
       <ContactUsConstructor />
     </RouterPage>
 
-    <!-- Нравится -->
+    <RouterPage router="{router}" name="Нравится" link="Like">
+      <LikeDoc />
+      <LikeConstructor />
+    </RouterPage>
+
     <!-- Опрос -->
     <!-- Плейлист -->
     <!-- Подписаться на автора -->
