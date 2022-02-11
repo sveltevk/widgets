@@ -15,8 +15,8 @@
   const componentName = 'Bookmarks';
   $: getCode =
     importComponent(componentName) +
-    `<${componentName} ${(url && `url="${url}" `) || ''}${
-      (height !== 24 && `height={${height}} `) || ''
+    `<${componentName} ${url ? `url="${url}" ` : ''}${
+      height !== 24 ? `height={${height}} ` : ''
     }/>`;
 </script>
 

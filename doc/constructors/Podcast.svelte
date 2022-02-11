@@ -13,7 +13,7 @@
   $: getCode =
     importComponent(componentName) +
     `<${componentName} episode="${episode}" ${
-      (width && `width={${width}} `) || ''
+      width ? `width={${width}} ` : ''
     }/>`;
 </script>
 

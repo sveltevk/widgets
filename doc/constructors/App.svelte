@@ -16,9 +16,9 @@
   const componentName = 'App';
   $: getCode =
     importComponent(componentName) +
-    `<${componentName} ${(url && `url="${url}" `) || ''}${
-      (mode !== 1 && `mode={${mode}} `) || ''
-    }${(mode === 3 && height !== 24 && `height={${height}} `) || ''}/>`;
+    `<${componentName} ${url ? `url="${url}" ` : ''}${
+      mode !== 1 ? `mode={${mode}} ` : ''
+    }${mode === 3 ? height !== 24 && `height={${height}} ` : ''}/>`;
 </script>
 
 <h2>Код виджета</h2>

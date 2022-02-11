@@ -51,20 +51,19 @@
   const componentName = 'CommunityMessages';
   $: getCode =
     importComponent(componentName) +
-    `<${componentName} ${(group && `group={${group}} `) || ''}${
-      (welcomeScreen && `welcomeScreen `) || ''
-    }${(expandTimeout && `expandTimeout={${expandTimeout}} `) || ''}${
-      (expanded && `expanded `) || ''
+    `<${componentName} ${group ? `group={${group}} ` : ''}${
+      welcomeScreen ? `welcomeScreen ` : ''
+    }${expandTimeout ? `expandTimeout={${expandTimeout}} ` : ''}${
+      expanded ? `expanded ` : ''
     }${
-      (widgetPosition !== 'right' && `widgetPosition="${widgetPosition}" `) ||
-      ''
-    }${(buttonType !== 'blue_circle' && `buttonType="${buttonType}" `) || ''}${
-      (disableButtonTooltip && `disableButtonTooltip `) || ''
-    }${
-      (tooltipButtonText && `tooltipButtonText="${tooltipButtonText}" `) || ''
-    }${(disableNewMessagesSound && `disableNewMessagesSound `) || ''}${
-      (disableExpandChatSound && `disableExpandChatSound `) || ''
-    }${(disableTitleChange && `disableTitleChange `) || ''}/>`;
+      widgetPosition !== 'right' ? `widgetPosition="${widgetPosition}" ` : ''
+    }${buttonType !== 'blue_circle' ? `buttonType="${buttonType}" ` : ''}${
+      disableButtonTooltip ? `disableButtonTooltip ` : ''
+    }${tooltipButtonText ? `tooltipButtonText="${tooltipButtonText}" ` : ''}${
+      disableNewMessagesSound ? `disableNewMessagesSound ` : ''
+    }${disableExpandChatSound ? `disableExpandChatSound ` : ''}${
+      disableTitleChange ? `disableTitleChange ` : ''
+    }/>`;
 </script>
 
 <h2>Код виджета</h2>

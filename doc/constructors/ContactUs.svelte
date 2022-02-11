@@ -16,8 +16,8 @@
   const componentName = 'ContactUs';
   $: getCode =
     importComponent(componentName) +
-    `<${componentName} oid={${oid}} ${(text && `text="${text}" `) || ''}${
-      (height !== 24 && `height={${height}} `) || ''
+    `<${componentName} oid={${oid}} ${text ? `text="${text}" ` : ''}${
+      height !== 24 ? `height={${height}} ` : ''
     }/>`;
 </script>
 
