@@ -10,6 +10,8 @@
   import Top from './Top.md';
   import Router from './components/Router.svelte';
   import RouterPage from './components/RouterPage.svelte';
+  import AuthDoc from '../src/Auth/README.md';
+  import AuthConstructor from './constructors/Auth.svelte';
   import BookmarksDoc from '../src/Bookmarks/README.md';
   import BookmarksConstructor from './constructors/Bookmarks.svelte';
   import ContactUsDoc from '../src/ContactUs/README.md';
@@ -48,7 +50,10 @@
   </ul>
 
   <Router let:this="{router}" bind:pages>
-    <!-- Авторизация -->
+    <RouterPage router="{router}" name="Авторизация" link="Auth">
+      <AuthDoc />
+      <AuthConstructor />
+    </RouterPage>
 
     <RouterPage router="{router}" name="Закладки" link="Bookmarks">
       <BookmarksDoc />

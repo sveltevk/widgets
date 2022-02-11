@@ -1,3 +1,36 @@
+export interface AuthUser {
+  uid: number;
+  first_name: string;
+  last_name: string;
+  photo: string;
+  photo_rec: string;
+  session: {
+    mid: number;
+    sid: string;
+    secret: string;
+    expire: number;
+    sig: string;
+  };
+  hash: string;
+}
+
+export class Auth {
+  $$prop_def: {
+    /**
+     * @type {number} [width={350}]
+     * @default 200
+     */
+    width?: number;
+
+    onAuth?: (user: AuthUser) => any;
+
+    /**
+     * @type {string} [authUrl="https://dev.vk.com/widgets/auth"]
+     */
+    authUrl?: string;
+  };
+}
+
 export class Bookmarks {
   $$prop_def: {
     /**

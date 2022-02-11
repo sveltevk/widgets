@@ -14,9 +14,9 @@
     ];
   };
 
-  const hash = writable(location.hash);
+  const hash = writable(location.hash.split('?').shift());
 
-  const hashChange = () => hash.set(location.hash);
+  const hashChange = () => hash.set(location.hash.split('?').shift());
 
   window.addEventListener('hashchange', hashChange);
 

@@ -3,12 +3,16 @@
   import 'prism-svelte';
 
   export let text;
+  export let lang = 'svelte';
 
-  $: highlighted = Prism.highlight(text, Prism.languages.svelte, 'svelte');
+  $: highlighted = {
+    svelte: Prism.highlight(text, Prism.languages.svelte, 'svelte'),
+    javascript: Prism.highlight(text, Prism.languages.javascript, 'javascript'),
+  }[lang];
 </script>
 
-<pre class="language-svelte">
-  <code class="language-svelte">
+<pre class="language-{lang}">
+  <code class="language-{lang}">
     {@html highlighted}
   </code>
 </pre>

@@ -1,3 +1,4 @@
+export { default as Auth } from './Auth/Auth.svelte';
 export { default as Bookmarks } from './Bookmarks/Bookmarks.svelte';
 export { default as ContactUs } from './ContactUs/ContactUs.svelte';
 export { default as Like } from './Like/Like.svelte';
