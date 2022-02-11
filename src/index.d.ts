@@ -90,6 +90,19 @@ export class App {
   $$prop_def: AppProps;
 }
 
+export class AllowMessagesFromCommunity {
+  $$prop_def: {
+    /** @type {number} [groupId={2158488}] */
+    groupId: number;
+
+    /**
+     * @type {number} [height={30}]
+     * @default 24
+     */
+    height?: 22 | 24 | 30;
+  };
+}
+
 export class CommunityMessages {
   $$prop_def: {
     /**

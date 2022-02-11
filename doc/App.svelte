@@ -18,6 +18,8 @@
   import LikeConstructor from './constructors/Like.svelte';
   import AppDoc from '../src/App/README.md';
   import AppConstructor from './constructors/App.svelte';
+  import AllowMessagesFromCommunityDoc from '../src/AllowMessagesFromCommunity/README.md';
+  import AllowMessagesFromCommunityConstructor from './constructors/AllowMessagesFromCommunity.svelte';
   import ArticleDoc from '../src/Article/README.md';
   import ArticleConstructor from './constructors/Article.svelte';
   import PodcastDoc from '../src/Podcast/README.md';
@@ -76,7 +78,16 @@
     </RouterPage>
 
     <!-- Публикация ссылок -->
-    <!-- Разрешить сообщения от сообщества -->
+
+    <RouterPage
+      router="{router}"
+      name="Разрешить сообщения от сообщества"
+      link="AllowMessagesFromCommunity"
+    >
+      <AllowMessagesFromCommunityDoc />
+      <AllowMessagesFromCommunityConstructor />
+    </RouterPage>
+
     <!-- Рекомендации -->
     <!-- Репортаж -->
 
