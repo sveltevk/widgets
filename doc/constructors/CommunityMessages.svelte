@@ -35,6 +35,8 @@
   let disableExpandChatSound;
   let disableTitleChange;
 
+  // Делаем позиционирование виджета абсолютным,
+  // относительно родительского элемента
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutationRecord) => {
       if (mutationRecord.target.style.position !== 'absolute') {
@@ -44,7 +46,9 @@
   });
 
   onMount(() => {
-    const element = document.getElementById('vk_community_messages_1');
+    const element = document.getElementById(
+      'vk_community_messages_parent',
+    ).firstElementChild;
     observer.observe(element, { attributes: true, attributeFilter: ['style'] });
   });
 
@@ -136,7 +140,7 @@
   </FormItem>
 
   <FormItem text="Виджет">
-    <div class="page">
+    <div class="page" id="vk_community_messages_parent">
       <CommunityMessages
         group="{group}"
         expandTimeout="{expandTimeout}"
