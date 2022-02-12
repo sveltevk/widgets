@@ -90,6 +90,14 @@ export class ContactUs {
   };
 }
 
+export class Poll {
+  $$prop_def: {
+    pollId: string;
+    width?: number;
+    pageUrl?: string;
+  };
+}
+
 export class Like {
   $$prop_def: {
     type?: 'full' | 'button' | 'mini' | 'vertical';

@@ -20,6 +20,8 @@
   import ContactUsConstructor from './constructors/ContactUs.svelte';
   import LikeDoc from '../src/Like/README.md';
   import LikeConstructor from './constructors/Like.svelte';
+  import PollDoc from '../src/Poll/README.md';
+  import PollConstructor from './constructors/Poll.svelte';
   import AppDoc from '../src/App/README.md';
   import AppConstructor from './constructors/App.svelte';
   import AllowMessagesFromCommunityDoc from '../src/AllowMessagesFromCommunity/README.md';
@@ -79,7 +81,11 @@
       <LikeConstructor />
     </RouterPage>
 
-    <!-- Опрос -->
+    <RouterPage router="{router}" name="Опрос" link="Poll">
+      <PollDoc />
+      <PollConstructor />
+    </RouterPage>
+
     <!-- Плейлист -->
     <!-- Подписаться на автора -->
 
