@@ -30,7 +30,6 @@
   import PodcastConstructor from './constructors/Podcast.svelte';
   import CommunityMessagesDoc from '../src/CommunityMessages/README.md';
   import CommunityMessagesConstructor from './constructors/CommunityMessages.svelte';
-  import { Config } from '@vkontakte/superappkit';
 
   const appId = 8054451;
 
