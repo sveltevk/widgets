@@ -4,7 +4,7 @@
   import Input from '../components/Input.svelte';
   import Code from '../components/Code.svelte';
   import { Auth, Post } from '../../src/index.js';
-  import { importComponent } from '../openapi';
+  import { VK_API_VERSION, importComponent } from '../openapi';
 
   let loginStatus = '';
 
@@ -22,7 +22,7 @@
     }
 
     const posts = e[1] + '_' + e[2] + (e[3] && '_' + e[3]);
-    VK.Api.call('wall.getById', { posts: posts, v: '5.131' }, (r) => {
+    VK.Api.call('wall.getById', { posts: posts, v: VK_API_VERSION }, (r) => {
       if (r.response) {
         postId = r.response[0].id;
         ownerId = r.response[0].owner_id;

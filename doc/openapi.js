@@ -1,9 +1,10 @@
-const OPENAPI_VERSION = 168;
+export const OPEN_API_VERSION = 168;
+export const VK_API_VERSION = '5.131';
 
 export const step1 = `<!-- Put this script tag to the <head> of your page -->
 <script
   type="text/javascript"
-  src="https://vk.com/js/api/openapi.js?${OPENAPI_VERSION}"
+  src="https://vk.com/js/api/openapi.js?${OPEN_API_VERSION}"
   charset="windows-1251"
 ></script>`;
 

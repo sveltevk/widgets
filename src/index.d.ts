@@ -117,6 +117,14 @@ export class Like {
   };
 }
 
+export class Subscribe {
+  $$prop_def: {
+    ownerId?: number;
+    mode?: 0 | 1 | 2;
+    soft?: true;
+  };
+}
+
 interface AppCard {
   /**
    * @type {string} [url="5327745"]

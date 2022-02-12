@@ -100,6 +100,8 @@
   import LikeConstructor from './constructors/Like.svelte';
   import PollDoc from '../src/Poll/README.md';
   import PollConstructor from './constructors/Poll.svelte';
+  import SubscribeDoc from '../src/Subscribe/README.md';
+  import SubscribeConstructor from './constructors/Subscribe.svelte';
   import AppDoc from '../src/App/README.md';
   import AppConstructor from './constructors/App.svelte';
   import AllowMessagesFromCommunityDoc from '../src/AllowMessagesFromCommunity/README.md';
@@ -165,7 +167,15 @@
       </RouterPage>
 
       <!-- Плейлист -->
-      <!-- Подписаться на автора -->
+
+      <RouterPage
+        router="{router}"
+        name="Подписаться на автора"
+        link="Subscribe"
+      >
+        <SubscribeDoc />
+        <SubscribeConstructor />
+      </RouterPage>
 
       <RouterPage router="{router}" name="Приложение" link="App">
         <AppDoc />
