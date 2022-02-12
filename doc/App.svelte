@@ -31,12 +31,6 @@
   import CommunityMessagesDoc from '../src/CommunityMessages/README.md';
   import CommunityMessagesConstructor from './constructors/CommunityMessages.svelte';
 
-  const appId = 8054451;
-
-  Config.init({
-    appId,
-  });
-
   VK.init({
     apiId: 8054451,
     onlyWidgets: true,
