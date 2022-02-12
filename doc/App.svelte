@@ -14,6 +14,8 @@
   import AuthConstructor from './constructors/Auth.svelte';
   import BookmarksDoc from '../src/Bookmarks/README.md';
   import BookmarksConstructor from './constructors/Bookmarks.svelte';
+  import PostDoc from '../src/Post/README.md';
+  import PostConstructor from './constructors/Post.svelte';
   import ContactUsDoc from '../src/ContactUs/README.md';
   import ContactUsConstructor from './constructors/ContactUs.svelte';
   import LikeDoc from '../src/Like/README.md';
@@ -28,9 +30,16 @@
   import PodcastConstructor from './constructors/Podcast.svelte';
   import CommunityMessagesDoc from '../src/CommunityMessages/README.md';
   import CommunityMessagesConstructor from './constructors/CommunityMessages.svelte';
+  import { Config } from '@vkontakte/superappkit';
+
+  const appId = 8054451;
+
+  Config.init({
+    appId,
+  });
 
   VK.init({
-    apiId: 8074433,
+    apiId: 8054451,
     onlyWidgets: true,
   });
 
@@ -60,7 +69,11 @@
       <BookmarksConstructor />
     </RouterPage>
 
-    <!-- Запись на стене -->
+    <RouterPage router="{router}" name="Запись на стене" link="Post">
+      <PostDoc />
+      <PostConstructor />
+    </RouterPage>
+
     <!-- Комментарии -->
 
     <RouterPage router="{router}" name="Напишите нам" link="ContactUs">

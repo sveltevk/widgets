@@ -46,6 +46,31 @@ export class Bookmarks {
   };
 }
 
+export class Post {
+  $$prop_def: {
+    /**
+     * @type {number} [ownerId={1}]
+     */
+    ownerId: number;
+
+    /**
+     * @type {number} [postId={45616}]
+     */
+    postId: number;
+
+    /**
+     * @type {string} [hash="5GJxomPDPE-WjYJPVoMZjectJImS"]
+     */
+    hash: string;
+
+    /**
+     * @type {number} [width={350}]
+     * @default 200
+     */
+    width?: number;
+  };
+}
+
 export class ContactUs {
   $$prop_def: {
     /** @type {number} [oid={-20003922}] */
