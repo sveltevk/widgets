@@ -9,20 +9,20 @@
   export let hash;
   export let width = undefined;
 
-  const widget_id = `vk_post_${(total_id += 1)}`;
+  const element_id = `vk_post_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.Post(widget_id, ownerId, postId, hash, { width });
+      VK.Widgets.Post(element_id, ownerId, postId, hash, { width });
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

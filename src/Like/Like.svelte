@@ -14,17 +14,17 @@
   export let pageImage = undefined;
   export let pageId = undefined;
 
-  const widget_id = `vk_like_${(total_id += 1)}`;
+  const element_id = `vk_like_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
       VK.Widgets.Like(
-        widget_id,
+        element_id,
         {
           type,
           width,
@@ -42,4 +42,4 @@
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

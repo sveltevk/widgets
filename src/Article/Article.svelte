@@ -6,20 +6,20 @@
   import { afterUpdate } from 'svelte';
   export let url;
 
-  const widget_id = `vk_article_${(total_id += 1)}`;
+  const element_id = `vk_article_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.Article(widget_id, url);
+      VK.Widgets.Article(element_id, url);
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

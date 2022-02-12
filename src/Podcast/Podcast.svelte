@@ -7,20 +7,20 @@
   export let episode;
   export let width;
 
-  const widget_id = `vk_podcast_${(total_id += 1)}`;
+  const element_id = `vk_podcast_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.Podcast(widget_id, episode, { width });
+      VK.Widgets.Podcast(element_id, episode, { width });
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

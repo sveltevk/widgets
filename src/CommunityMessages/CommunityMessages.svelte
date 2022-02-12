@@ -22,7 +22,7 @@
 
   export const destroy = () => {
     if (widget) {
-      widget.destroy(widget_id);
+      widget.destroy(element_id);
     }
   };
 
@@ -44,13 +44,13 @@
     }
   };
 
-  const widget_id = `vk_community_messages_${(total_id += 1)}`;
+  const element_id = `vk_community_messages_${(total_id += 1)}`;
 
   afterUpdate(() => {
     destroy();
 
     try {
-      widget = VK.Widgets.CommunityMessages(widget_id, group, {
+      widget = VK.Widgets.CommunityMessages(element_id, group, {
         onCanNotWrite,
         welcomeScreen: welcomeScreen ? 1 : 0,
         expandTimeout,
@@ -71,4 +71,4 @@
   onDestroy(destroy);
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

@@ -9,20 +9,20 @@
   export let onAuth = undefined;
   export let authUrl = undefined;
 
-  const widget_id = `vk_auth_${(total_id += 1)}`;
+  const element_id = `vk_auth_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.Auth(widget_id, { width, onAuth, authUrl });
+      VK.Widgets.Auth(element_id, { width, onAuth, authUrl });
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

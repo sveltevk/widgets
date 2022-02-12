@@ -8,20 +8,20 @@
   export let text = 'Напишите нам';
   export let height = 24;
 
-  const widget_id = `vk_contact_us_${(total_id += 1)}`;
+  const element_id = `vk_contact_us_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.ContactUs(widget_id, { text, height }, oid);
+      VK.Widgets.ContactUs(element_id, { text, height }, oid);
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

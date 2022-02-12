@@ -7,20 +7,20 @@
   export let url;
   export let height;
 
-  const widget_id = `vk_bookmarks_${(total_id += 1)}`;
+  const element_id = `vk_bookmarks_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.Bookmarks(widget_id, { url, height });
+      VK.Widgets.Bookmarks(element_id, { url, height });
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

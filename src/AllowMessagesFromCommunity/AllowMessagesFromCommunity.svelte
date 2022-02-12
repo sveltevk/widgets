@@ -7,20 +7,20 @@
   export let groupId;
   export let height = 24;
 
-  const widget_id = `vk_allow_messages_from_community_${(total_id += 1)}`;
+  const element_id = `vk_allow_messages_from_community_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.AllowMessagesFromCommunity(widget_id, { height }, groupId);
+      VK.Widgets.AllowMessagesFromCommunity(element_id, { height }, groupId);
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>

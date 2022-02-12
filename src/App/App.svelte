@@ -8,20 +8,20 @@
   export let mode;
   export let height;
 
-  const widget_id = `vk_app_${(total_id += 1)}`;
+  const element_id = `vk_app_${(total_id += 1)}`;
 
   afterUpdate(() => {
-    const element = document.getElementById(widget_id);
+    const element = document.getElementById(element_id);
     while (element.firstChild) {
       element.firstChild.remove();
     }
 
     try {
-      VK.Widgets.App(widget_id, url, { mode, height });
+      VK.Widgets.App(element_id, url, { mode, height });
     } catch (error) {
       console.error(error);
     }
   });
 </script>
 
-<div id="{widget_id}"></div>
+<div id="{element_id}"></div>
