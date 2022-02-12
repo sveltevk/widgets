@@ -4,7 +4,7 @@
 
   export let pages = [];
 
-  const addPage = (link, name) => {
+  export const addPage = (link, name) => {
     pages = [
       ...pages,
       {
@@ -14,7 +14,7 @@
     ];
   };
 
-  const hash = writable(location.hash.split('?').shift());
+  export const hash = writable(location.hash.split('?').shift());
 
   const hashChange = () => hash.set(location.hash.split('?').shift());
 
@@ -23,4 +23,8 @@
   onDestroy(() => window.removeEventListener('hashchange', hashChange));
 </script>
 
+{#each pages as page}
+  <!-- svelte-ignore a11y-missing-content -->
+  <a id="{page.link}"></a>
+{/each}
 <slot this="{{ addPage, hash }}" />
