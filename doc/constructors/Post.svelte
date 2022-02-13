@@ -53,22 +53,25 @@
     </FormItem>
   {:else}
     <FormItem text="Авторизация">
-      <p>Для работы конструктора, необходимо авторизоваться</p>
+      <p>
+        Для автоматического определения хэша из ссылки, необходимо
+        авторизоваться
+      </p>
       <Auth onAuth="{getLoginStatus}" />
     </FormItem>
   {/if}
 
-  <!-- <FormItem text="Идентификатор владельца">
-    <Input bind:value="{ownerId}" type="number"/>
+  <FormItem text="Идентификатор владельца">
+    <Input bind:value="{ownerId}" type="number" />
   </FormItem>
 
   <FormItem text="Идентификатор записи">
-    <Input bind:value="{postId}" type="number" min="1"/>
+    <Input bind:value="{postId}" type="number" min="1" />
   </FormItem>
 
   <FormItem text="Хэш">
     <Input bind:value="{hash}" />
-  </FormItem> -->
+  </FormItem>
 
   <FormItem text="Ширина">
     <Input bind:value="{width}" type="number" placeholder="100%" />

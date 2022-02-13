@@ -5,8 +5,8 @@
 <script>
   import { afterUpdate } from 'svelte';
   export let url;
-  export let mode;
-  export let height;
+  export let mode = undefined;
+  export let height = undefined;
 
   const element_id = `vk_app_${(total_id += 1)}`;
 

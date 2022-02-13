@@ -5,7 +5,7 @@
 <script>
   import { afterUpdate } from 'svelte';
   export let episode;
-  export let width;
+  export let width = undefined;
 
   const element_id = `vk_podcast_${(total_id += 1)}`;
 

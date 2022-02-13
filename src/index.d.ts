@@ -177,6 +177,19 @@ export class AllowMessagesFromCommunity {
   };
 }
 
+export class TextLive {
+  $$prop_def: {
+    textLiveId: string;
+    textPostId?: string;
+    hash: string;
+
+    /**
+     * @type {number} [width={320}]
+     */
+    width?: number;
+  };
+}
+
 export class CommunityMessages {
   $$prop_def: {
     /**

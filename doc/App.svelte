@@ -106,6 +106,8 @@
   import AppConstructor from './constructors/App.svelte';
   import AllowMessagesFromCommunityDoc from '../src/AllowMessagesFromCommunity/README.md';
   import AllowMessagesFromCommunityConstructor from './constructors/AllowMessagesFromCommunity.svelte';
+  import TextLiveDoc from '../src/TextLive/README.md';
+  import TextLiveConstructor from './constructors/TextLive.svelte';
   import ArticleDoc from '../src/Article/README.md';
   import ArticleConstructor from './constructors/Article.svelte';
   import PodcastDoc from '../src/Podcast/README.md';
@@ -194,7 +196,11 @@
       </RouterPage>
 
       <!-- Рекомендации -->
-      <!-- Репортаж -->
+
+      <RouterPage router="{router}" name="Репортаж" link="TextLive">
+        <TextLiveDoc />
+        <TextLiveConstructor />
+      </RouterPage>
 
       <RouterPage
         router="{router}"

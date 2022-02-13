@@ -4,8 +4,8 @@
 
 <script>
   import { afterUpdate } from 'svelte';
-  export let url;
-  export let height;
+  export let url = undefined;
+  export let height = undefined;
 
   const element_id = `vk_bookmarks_${(total_id += 1)}`;
 

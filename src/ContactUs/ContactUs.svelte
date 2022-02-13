@@ -5,8 +5,8 @@
 <script>
   import { afterUpdate } from 'svelte';
   export let oid;
-  export let text = 'Напишите нам';
-  export let height = 24;
+  export let text = undefined;
+  export let height = undefined;
 
   const element_id = `vk_contact_us_${(total_id += 1)}`;
 

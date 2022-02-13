@@ -5,7 +5,7 @@
 <script>
   import { afterUpdate } from 'svelte';
 
-  export let width = 200;
+  export let width = undefined;
   export let onAuth = undefined;
   export let authUrl = undefined;
 
