@@ -104,6 +104,8 @@
   import SubscribeConstructor from './constructors/Subscribe.svelte';
   import AppDoc from '../src/App/README.md';
   import AppConstructor from './constructors/App.svelte';
+  import ShareDoc from '../src/Share/README.md';
+  import ShareConstructor from './constructors/Share.svelte';
   import AllowMessagesFromCommunityDoc from '../src/AllowMessagesFromCommunity/README.md';
   import AllowMessagesFromCommunityConstructor from './constructors/AllowMessagesFromCommunity.svelte';
   import RecommendedDoc from '../src/Recommended/README.md';
@@ -186,7 +188,10 @@
         <AppConstructor />
       </RouterPage>
 
-      <!-- Публикация ссылок -->
+      <RouterPage router="{router}" name="Публикация ссылок" link="Share">
+        <ShareDoc />
+        <ShareConstructor />
+      </RouterPage>
 
       <RouterPage
         router="{router}"

@@ -6,6 +6,7 @@ export { default as Like } from './Like/Like.svelte';
 export { default as Poll } from './Poll/Poll.svelte';
 export { default as Subscribe } from './Subscribe/Subscribe.svelte';
 export { default as App } from './App/App.svelte';
+export { default as Share } from './Share/Share.svelte';
 export { default as AllowMessagesFromCommunity } from './AllowMessagesFromCommunity/AllowMessagesFromCommunity.svelte';
 export { default as Recommended } from './Recommended/Recommended.svelte';
 export { default as TextLive } from './TextLive/TextLive.svelte';

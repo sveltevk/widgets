@@ -164,6 +164,25 @@ export class App {
   $$prop_def: AppProps;
 }
 
+export class Share {
+  $$prop_def: {
+    url?: string;
+    title?: string;
+    image?: string;
+    noparse?: true;
+    noVkLinks?: true;
+    type?:
+      | 'round'
+      | 'round_nocount'
+      | 'button'
+      | 'button_nocount'
+      | 'link'
+      | 'link_noicon'
+      | 'custom';
+    text?: string;
+  };
+}
+
 export class AllowMessagesFromCommunity {
   $$prop_def: {
     /** @type {number} [groupId={2158488}] */
