@@ -190,6 +190,17 @@ export class TextLive {
   };
 }
 
+export class Recommended {
+  $$prop_def: {
+    limit?: number;
+    max?: number;
+    period?: 'day' | 'week' | 'month';
+    verb?: true;
+    sort?: 'friend_likes' | 'likes';
+    target?: 'blank' | 'top' | 'parent';
+  };
+}
+
 export class CommunityMessages {
   $$prop_def: {
     /**
