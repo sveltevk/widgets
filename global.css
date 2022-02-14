@@ -79,7 +79,7 @@ pre {
   border-radius: 2px;
 }
 
-table {
+table:not(#vkshare*) {
   width: 100%;
   border-radius: 8px;
   display: table;
@@ -88,7 +88,7 @@ table {
   overflow: hidden;
 }
 
-th {
+table:not(#vkshare*) th {
   font-weight: 400;
   text-align: left;
   padding: 16px;
@@ -97,10 +97,10 @@ th {
   background: #f9f9f9;
 }
 
-td {
+table:not(#vkshare*) td {
   border-top: 1px solid #e1e3e6;
 }
 
-td:not([colspan]) {
+table:not(#vkshare*) td:not([colspan]) {
   padding: 20px 16px;
 }

@@ -130,14 +130,14 @@ code:not(code[class*='language-']) {
   white-space: nowrap;
 }
 
-tbody > tr > td:nth-child(1) {
+table:not(#vkshare*) tbody > tr > td:nth-child(1) {
   color: var(--function);
 }
 
-tbody > tr > td:nth-child(2) {
+table:not(#vkshare*) tbody > tr > td:nth-child(2) {
   color: var(--comment);
 }
 
-tbody > tr > td:nth-child(3) {
+table:not(#vkshare*) tbody > tr > td:nth-child(3) {
   color: var(--number);
 }
