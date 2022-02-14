@@ -14,7 +14,7 @@
     border: 1px solid #e1e3e6;
     box-sizing: border-box;
     border-radius: 8px;
-    margin: 10px 0;
+    margin: 20px 0;
   }
 
   .left {

@@ -25,7 +25,7 @@
 
 <Form>
   <FormItem text="Ссылка">
-    <Input bind:value="{url}" placeholder="{window.location.href}" />
+    <Input bind:value="{url}" />
   </FormItem>
 
   <FormItem text="Вид">
