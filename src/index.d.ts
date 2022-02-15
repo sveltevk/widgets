@@ -83,6 +83,15 @@ export class Comments {
     pageId?: string;
   };
 }
+export class CommentsBrowse {
+  $$prop_def: {
+    width?: number;
+    height?: number;
+    limit?: number;
+    mini?: 'auto' | boolean;
+    norealtime?: boolean;
+  };
+}
 
 export class ContactUs {
   $$prop_def: {
