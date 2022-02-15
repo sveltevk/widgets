@@ -90,14 +90,6 @@ export class ContactUs {
   };
 }
 
-export class Poll {
-  $$prop_def: {
-    pollId: string;
-    width?: number;
-    pageUrl?: string;
-  };
-}
-
 export class Like {
   $$prop_def: {
     type?: 'full' | 'button' | 'mini' | 'vertical';
@@ -114,6 +106,27 @@ export class Like {
     pageUrl?: string;
     pageImage?: string;
     pageId?: string;
+  };
+}
+
+export class Poll {
+  $$prop_def: {
+    pollId: string;
+    width?: number;
+    pageUrl?: string;
+  };
+}
+
+export class Playlist {
+  $$prop_def: {
+    ownerId: number;
+    playlistId: number;
+    hash: string;
+
+    /**
+     * @type {number} [width={320}]
+     */
+    width?: number;
   };
 }
 

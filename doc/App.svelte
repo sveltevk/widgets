@@ -100,6 +100,8 @@
   import LikeConstructor from './constructors/Like.svelte';
   import PollDoc from '../src/Poll/README.md';
   import PollConstructor from './constructors/Poll.svelte';
+  import PlaylistDoc from '../src/Playlist/README.md';
+  import PlaylistConstructor from './constructors/Playlist.svelte';
   import SubscribeDoc from '../src/Subscribe/README.md';
   import SubscribeConstructor from './constructors/Subscribe.svelte';
   import AppDoc from '../src/App/README.md';
@@ -172,7 +174,10 @@
         <PollConstructor />
       </RouterPage>
 
-      <!-- Плейлист -->
+      <RouterPage router="{router}" name="Плейлист" link="Playlist">
+        <PlaylistDoc />
+        <PlaylistConstructor />
+      </RouterPage>
 
       <RouterPage
         router="{router}"

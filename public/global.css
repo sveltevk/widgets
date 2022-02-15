@@ -79,7 +79,7 @@ pre {
   border-radius: 2px;
 }
 
-table:not(#vkshare*) {
+table:not([id*=vkshare]) {
   width: 100%;
   border-radius: 8px;
   display: table;
@@ -88,7 +88,7 @@ table:not(#vkshare*) {
   overflow: hidden;
 }
 
-table:not(#vkshare*) th {
+table:not([id*=vkshare]) th {
   font-weight: 400;
   text-align: left;
   padding: 16px;
@@ -97,10 +97,10 @@ table:not(#vkshare*) th {
   background: #f9f9f9;
 }
 
-table:not(#vkshare*) td {
+table:not([id*=vkshare]) td {
   border-top: 1px solid #e1e3e6;
 }
 
-table:not(#vkshare*) td:not([colspan]) {
+table:not([id*=vkshare]) td:not([colspan]) {
   padding: 20px 16px;
 }
