@@ -94,6 +94,8 @@
   import BookmarksConstructor from './constructors/Bookmarks.svelte';
   import PostDoc from '../src/Post/README.md';
   import PostConstructor from './constructors/Post.svelte';
+  import CommentsDoc from '../src/Comments/README.md';
+  import CommentsConstructor from './constructors/Comments.svelte';
   import ContactUsDoc from '../src/ContactUs/README.md';
   import ContactUsConstructor from './constructors/ContactUs.svelte';
   import LikeDoc from '../src/Like/README.md';
@@ -157,7 +159,10 @@
         <PostConstructor />
       </RouterPage>
 
-      <!-- Комментарии -->
+      <RouterPage router="{router}" name="Комментарии" link="Comments">
+        <CommentsDoc />
+        <CommentsConstructor />
+      </RouterPage>
 
       <RouterPage router="{router}" name="Напишите нам" link="ContactUs">
         <ContactUsDoc />

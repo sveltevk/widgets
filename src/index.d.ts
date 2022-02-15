@@ -71,6 +71,19 @@ export class Post {
   };
 }
 
+export class Comments {
+  $$prop_def: {
+    width?: number;
+    height?: number;
+    limit?: number;
+    attach?: string | false;
+    autoPublish?: boolean;
+    norealtime?: boolean;
+    pageUrl?: string;
+    pageId?: string;
+  };
+}
+
 export class ContactUs {
   $$prop_def: {
     /** @type {number} [oid={-20003922}] */
