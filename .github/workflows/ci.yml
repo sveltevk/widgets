@@ -31,9 +31,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Deploy Site 🚀
+      - name: Publishing docs
         if: github.ref == 'refs/heads/master'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          BRANCH: gh-pages
+          FOLDER: public
+          CLEAN: false
