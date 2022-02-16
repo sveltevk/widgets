@@ -1,7 +1,7 @@
 <style>
   .FormItem {
     display: block;
-    padding: 12px 16px;
+    margin: 12px 16px;
   }
 
   .FormItem p,

@@ -118,12 +118,14 @@
   import RecommendedConstructor from './constructors/Recommended.svelte';
   import TextLiveDoc from '../src/TextLive/README.md';
   import TextLiveConstructor from './constructors/TextLive.svelte';
+  import CommunityMessagesDoc from '../src/CommunityMessages/README.md';
+  import CommunityMessagesConstructor from './constructors/CommunityMessages.svelte';
+  import GroupDoc from '../src/Group/README.md';
+  import GroupConstructor from './constructors/Group.svelte';
   import ArticleDoc from '../src/Article/README.md';
   import ArticleConstructor from './constructors/Article.svelte';
   import PodcastDoc from '../src/Podcast/README.md';
   import PodcastConstructor from './constructors/Podcast.svelte';
-  import CommunityMessagesDoc from '../src/CommunityMessages/README.md';
-  import CommunityMessagesConstructor from './constructors/CommunityMessages.svelte';
 
   VK.init({
     apiId: 8054451,
@@ -242,7 +244,10 @@
         <CommunityMessagesConstructor />
       </RouterPage>
 
-      <!-- Сообщества -->
+      <RouterPage router="{router}" name="Сообщества" link="Group">
+        <GroupDoc />
+        <GroupConstructor />
+      </RouterPage>
 
       <RouterPage router="{router}" name="Статья" link="Article">
         <ArticleDoc />

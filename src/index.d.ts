@@ -282,6 +282,20 @@ export class CommunityMessages {
   minimize(): void;
 }
 
+export class Group {
+  $$prop_def: {
+    groupId: number;
+    width?: 'auto' | number;
+    height?: number;
+    mode?: 1 | 2 | 3 | 4;
+    noCover?: boolean;
+    wide?: boolean;
+    color1?: string;
+    color2?: string;
+    color3?: string;
+  };
+}
+
 export class Article {
   $$prop_def: {
     /**

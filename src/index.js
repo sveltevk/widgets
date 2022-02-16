@@ -14,5 +14,6 @@ export { default as AllowMessagesFromCommunity } from './AllowMessagesFromCommun
 export { default as Recommended } from './Recommended/Recommended.svelte';
 export { default as TextLive } from './TextLive/TextLive.svelte';
 export { default as CommunityMessages } from './CommunityMessages/CommunityMessages.svelte';
+export { default as Group } from './Group/Group.svelte';
 export { default as Article } from './Article/Article.svelte';
 export { default as Podcast } from './Podcast/Podcast.svelte';
